@@ -1,0 +1,19 @@
+---
+name: Init ToFu
+description: Initiate tofu configuration, and runs checks and validation
+
+runs:
+  using: composite
+  steps:
+    - name: Install OpenToFu
+      uses: opentofu/setup-opentofu@v1
+      with:
+        tofu_version: 1.11.1
+
+    - name: Init configuration
+      run: tofu init
+      shell: bash
+
+    - name: Check configuration
+      run: tofu validate
+      shell: bash

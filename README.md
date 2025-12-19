@@ -31,7 +31,7 @@ _Coming soon - Deploy in under 1 hour_
 ## 📋 Prerequisites
 
 - AWS Account with Organization access
-- Terraform >= 1.6
+- OpenTofu >= 1.11
 - AWS CLI configured
 
 ## 🛠️ Service Catalog Templates
