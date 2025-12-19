@@ -1,0 +1,28 @@
+---
+name: Platform Starter | Setup Management Resources
+on:
+  pull_request:
+    branches:
+      - main
+defaults:
+  run:
+    shell: bash
+    # working-directory: "${{ github.workspace }}/foundations/01-organizations"
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.IDP_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Test connectivity
+        run: |
+          aws sts get-caller-identity

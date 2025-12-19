@@ -1,0 +1,17 @@
+---
+name: Plan ToFu
+description: Runs a plan on a tofu configuration and saves the plan output as artifact
+
+runs:
+  using: composite
+  steps:
+    - name: Run Plan
+      shell: bash
+      run: |
+        tofu plan -out=plan.out
+
+    - name: Upload Plan Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: tofu-plan
+        path: plan.out
