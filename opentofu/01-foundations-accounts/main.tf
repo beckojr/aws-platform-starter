@@ -21,21 +21,21 @@ locals {
       email  = "platform-acc@outlook.com"
       tags   = { env = "prod" }
     }
-    # observability = {
-    #   parent = "management"
-    #   email  = "platform-obs@outlook.com"
-    # tags = { env = "prod" }
-    # }
-    # dev = {
-    #   parent = "development"
-    #   email  = "platform-dev@outlook.com"
-    # tags = { env = "dev" }
-    # }
-    # prod = {
-    #   parent = "production"
-    #   email  = "platform-prod@outlook.com"
-    # tags = { env = "prod" }
-    # }
+    observability = {
+      parent = "management"
+      email  = "platform-obs@outlook.com"
+      tags   = { env = "prod" }
+    }
+    dev = {
+      parent = "development"
+      email  = "platform-dev@outlook.com"
+      tags   = { env = "dev" }
+    }
+    prod = {
+      parent = "production"
+      email  = "platform-prod@outlook.com"
+      tags   = { env = "prod" }
+    }
   }
 }
 

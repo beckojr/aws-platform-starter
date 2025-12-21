@@ -26,17 +26,17 @@ variable "platform_account_id" {
   description = "(required) platform account ID"
 }
 
-# variable "observability_account_id" {
-#   type        = string
-#   description = "(required) observability account ID"
-# }
+variable "observability_account_id" {
+  type        = string
+  description = "(required) observability account ID"
+}
 
-# variable "dev_account_id" {
-#   type        = string
-#   description = "(required) dev account ID"
-# }
+variable "dev_account_id" {
+  type        = string
+  description = "(required) dev account ID"
+}
 
-# variable "prod_account_id" {
-#   type        = string
-#   description = "(required) Prod account ID"
-# }
+variable "prod_account_id" {
+  type        = string
+  description = "(required) Prod account ID"
+}
